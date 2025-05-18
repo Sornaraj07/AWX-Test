@@ -3,5 +3,8 @@
   hosts: Windows
   become: true
   tasks:
+    - name: Windows | Chocolatey 
+      win_chocolatey:
+        name: chocolatey
     - name: Windows_Ping
       win_ping:
