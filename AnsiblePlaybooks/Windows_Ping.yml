@@ -1,7 +1,7 @@
 ---
 - name: Windows Ping
   hosts: Windows
-  become: true
+  become: false
   tasks:
     - name: Windows | Chocolatey 
       win_chocolatey:
