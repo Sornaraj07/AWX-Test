@@ -1,0 +1,7 @@
+---
+- name: Windows Ping
+  hosts: Windows
+  become: true
+  tasks:
+    - name: Windows_Ping
+      win_ping:
