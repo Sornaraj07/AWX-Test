@@ -1,0 +1,7 @@
+---
+- name: Ping Check
+  hosts: Linux
+  become: true
+  tasks:
+    - name: Ping check servers
+      ping: ~
