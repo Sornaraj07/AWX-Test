@@ -1,0 +1,14 @@
+---
+- name: Install WinRAR
+  hosts: Windows
+  tasks:
+    - name: Download WinRAR
+      win_get_url:
+        url: https://www.rarlab.com/rar/winrar-x64-611.exe
+        dest: C:\Temp\winrar-x64-611.exe
+
+    - name: Install WinRAR
+      win_package:
+        path: C:\Temp\winrar-x64-611.exe
+        state: present
+        

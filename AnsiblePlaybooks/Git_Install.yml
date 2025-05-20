@@ -1,0 +1,12 @@
+---
+- name: Install Git
+  hosts: Linux
+  tasks:
+    - name: Install Git
+      yum:
+        name: git
+        state: present
+    - name: Verify Git installation
+      command: git --version
+      register: git_version
+    
